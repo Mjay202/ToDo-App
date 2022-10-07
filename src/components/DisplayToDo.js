@@ -1,11 +1,18 @@
 import React from 'react'
-// import { useState } from 'react'
+import { useState } from 'react'
 
 const DisplayToDo = ({allToDo, setallToDo}) => {
-
-  
+const newall =[...allToDo]
+const [superToDo, setsuperToDo] = useState({allToDo})
 const deleteToDo = (index) => {
-  setallToDo(allToDo.splice(index, 1))  
+  const i = index
+  setallToDo((current)=> (
+    current.filter((toDo)=> i == index )
+  ))
+  // setsuperToDo(superToDo.splice(index, 1))  
+  // console.log(superToDo)
+  // console.log(newall)
+  console.log(allToDo)
 }
 
   return (

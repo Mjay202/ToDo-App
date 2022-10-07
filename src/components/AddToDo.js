@@ -14,6 +14,7 @@ const AddToDo = ({addToDo}) => {
   return (
     
     <>
+       
               {/* <form action="" method='Post'> */}
             <div className="container shadow col-lg-4">
                 <h1 className='text-center my-3 mb-4'>Add To Do</h1>

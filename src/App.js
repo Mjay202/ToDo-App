@@ -1,3 +1,4 @@
+import React from "react"
 // import logo from './logo.svg';
 import './App.css';
 import AddToDo from './components/AddToDo';
@@ -27,11 +28,11 @@ function App() {
   return (
     <>
         
-      <div className="row mt-4">
+        <div className="row mt-4">
         <AddToDo addToDo={addToDo}/>
-        <DisplayToDo allToDo={{allToDo, setallToDo}}/>
+        <DisplayToDo allToDo={allToDo} setallToDo={setallToDo}/>
     
-      </div>
+        </div>
     </>
   );
 }
