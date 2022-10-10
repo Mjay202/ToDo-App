@@ -5,14 +5,12 @@ const DisplayToDo = ({allToDo, setallToDo}) => {
 const newall =[...allToDo]
 const [superToDo, setsuperToDo] = useState({allToDo})
 const deleteToDo = (index) => {
-  const i = index
-  setallToDo((current)=> (
-    current.filter((toDo)=> i == index )
-  ))
-  // setsuperToDo(superToDo.splice(index, 1))  
-  // console.log(superToDo)
-  // console.log(newall)
-  console.log(allToDo)
+  if (index !== -1) {
+    newall.splice(index, 1)
+    setallToDo(newall)
+  }
+  console.log(index)
+  
 }
 
   return (
