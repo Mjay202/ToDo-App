@@ -16,7 +16,18 @@ function App() {
         "time": time,
         "date": date
     }])
-    console.log( allToDo);  
+    // console.log( allToDo);  
+  }
+  const [check, setcheck] = useState(-1)
+  
+  
+  const edit=()=>{
+    
+  }
+
+  const checked=(index)=>{
+    setcheck(index)
+    console.log(check)
   }
 
 
@@ -29,8 +40,8 @@ function App() {
     <>
         
         <div className="row mt-4">
-        <AddToDo addToDo={addToDo}/>
-        <DisplayToDo allToDo={allToDo} setallToDo={setallToDo}/>
+          <AddToDo addToDo={addToDo} check={check} setcheck={setcheck} allToDo={allToDo} setallToDo={setallToDo}/>
+        <DisplayToDo allToDo={allToDo} setallToDo={setallToDo} checked={checked}/>
     
         </div>
     </>
